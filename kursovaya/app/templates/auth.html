@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Авторизация</h1>
+<form action="{{ url_for('auth.login') }}" method="post">
+    <div class="mb-3">
+        <label for="login" class="form-label">Логин</label>
+        <input type="login" class="form-control" id="login" name="login" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Пароль</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <div class="mb-3">
+        <input type="checkbox" id="remember" name="remember">
+        <label class="form-label" for="remember">Запомнить меня</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Войти</button>
+</form>
+{% endblock %}

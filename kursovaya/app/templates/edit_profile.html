@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <h1 class="mb-4">Редактирование профиля</h1>
+        <form method="post">
+            <div class="mb-3">
+                <label for="user_surname" class="form-label">Фамилия:</label>
+                <input type="text" class="form-control" id="user_surname" name="user_surname" value="{{ user_info.user_surname }}">
+            </div>
+            <div class="mb-3">
+                <label for="user_name" class="form-label">Имя:</label>
+                <input type="text" class="form-control" id="user_name" name="user_name" value="{{ user_info.user_name }}">
+            </div>
+            <div class="mb-3">
+                <label for="user_midname" class="form-label">Отчество:</label>
+                <input type="text" class="form-control" id="user_midname" name="user_midname" value="{{ user_info.user_midname }}">
+            </div>
+            <div class="mb-3">
+                <label for="login" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="login" name="login" value="{{ user_info.email }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+            <a href="{{ url_for('users.profile') }}" class="btn btn-secondary">Назад к профилю</a>
+        </form>
+    </div>
+{% endblock %}

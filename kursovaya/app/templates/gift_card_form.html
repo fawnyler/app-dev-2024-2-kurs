@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="mb-4">Оформление подарочной карты</h1>
+    <form action="{{ url_for('checkout_gift_card') }}" method="post">
+        <div class="mb-3">
+            <label for="recipient_name" class="form-label">Имя получателя:</label>
+            <input type="text" class="form-control" id="recipient_name" name="recipient_name" required>
+        </div>
+        <div class="mb-3">
+            <label for="recipient_email" class="form-label">Email получателя:</label>
+            <input type="email" class="form-control" id="recipient_email" name="recipient_email" required>
+        </div>
+        <div class="mb-3">
+            <label for="amount" class="form-label">Сумма подарочной карты:</label>
+            <input type="number" class="form-control" id="amount" name="amount" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Оформить подарочную карту</button>
+    </form>
+{% endblock %}

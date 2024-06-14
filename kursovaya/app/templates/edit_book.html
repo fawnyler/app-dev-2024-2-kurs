@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">Редактировать книгу</h1>
+<form method="post" action="{{ url_for('admin.edit_book', book_id=book['book_id']) }}">
+    <div class="mb-3">
+        <label for="title" class="form-label">Название</label>
+        <input type="text" class="form-control" id="title" name="title" value="{{ book['title'] }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="author" class="form-label">Автор</label>
+        <input type="text" class="form-control" id="author" name="author" value="{{ book['author'] }}" required>
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Цена</label>
+        <input type="number" class="form-control" id="price" name="price" value="{{ book['price'] }}" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+</form>
+{% endblock %}

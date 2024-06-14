@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Избранное</h1>
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Название книги</th>
+      <th>Автор</th>
+      <th>Цена</th>
+      <th>Количество</th>
+      <th>Действия</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in wishlist_items %}
+    <tr>
+      <td>{{ item.title }}</td>
+      <td>{{ item.author }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.amount }}</td>
+      <td>
+        <form action="{{ url_for('move_to_cart') }}" method="post">
+          <input type="hidden" name="book_id" value="{{ item.book_id }}">
+          <button type="submit" class="btn btn-secondary mt-2">В корзину</button>
+        </form>
+        <form action="{{ url_for('remove_from_wishlist') }}" method="post">
+          <input type="hidden" name="book_id" value="{{ item.book_id }}">
+          <button type="submit" class="btn btn-danger mt-2">Удалить</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

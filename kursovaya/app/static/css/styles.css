@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.input-group-text {
+    cursor: pointer;
+}
+
+.genre-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.genre-container a {
+    flex: 0 0 auto;
+    margin-right: 8px;
+}
+
+.genre-scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+  
+.genre-scroll {
+    display: flex;
+    gap: 10px;
+}
+  
+.genre-item {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.genre-item:hover {
+    background-color: #e0e0e0;
+}
+  
+.flex-fill {
+    flex: 1 1 auto;
+}
+
+.rounded-circle {
+    max-width: 150px;
+    max-height: 150px;
+    width: 100%;
+    height: auto;
+}
+
+.publisher-logo {
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    max-width: 250px;  
+    margin: auto;     
+}
+
+.card-img-top {
+    width: 100%; 
+    height: auto; 
+}
